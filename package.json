@@ -4,13 +4,18 @@
   "description": "Simple API for defining mongoose models and loading them into a single object for easy access.",
   "main": "index.js",
   "dependencies": {
-    "extend": "~1.2.1",
-    "mongoose": "~3.8.0",
-    "mongoose-auto-increment": "~2.0.4"
+    "extend": "*",
+    "mongoose-auto-increment": "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+      "mocha": "*",
+      "chai": "*"
+  },
   "scripts": {
     "test": "mocha"
+  },
+  "peerDependencies": {
+      "mongoose": "*"
   },
   "repository": {
     "type": "git",
