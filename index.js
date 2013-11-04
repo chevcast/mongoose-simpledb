@@ -21,7 +21,7 @@ module.exports = exports = {
                 // The mongoose connection string to use.
                 connectionString: 'mongodb:\\localhost',
                 // The path to the directory where your models are stored.
-                modelsDir: path.join(__dirname, '..', 'dbmodels'),
+                modelsDir: path.join(__dirname, '..', '..', 'dbmodels'),
                 // Whether or not dbwrapper should auto-increment _id's of type Number.
                 autoIncrementNumberIds: true,
                 // By default print errors to the console.
@@ -29,7 +29,7 @@ module.exports = exports = {
             };
         if (options)
             extend(settings, options);
-        var conn = mongoose.createConnection(connectionString, { server: { socketOptions: { keepAlive: 1 } } });
+        var conn = mongoose.createConnection(settings.connectionString, { server: { socketOptions: { keepAlive: 1 } } });
         conn.on('error', console.error);
         conn.once('open', function () {
             // If mongoose-auto-increment plugin is installedInitialize mongoose-auto-increment plugin.

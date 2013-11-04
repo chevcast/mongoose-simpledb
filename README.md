@@ -98,7 +98,7 @@ Available Options and their default values:
         // The mongoose connection string to use.
         connectionString: 'mongodb:\\localhost',
         // The path to the directory where your models are stored.
-        modelsDir: path.join(__dirname, '..', 'dbmodels'),
+        modelsDir: path.join(__dirname, '..', '..', 'dbmodels'),
         // Whether or not dbwrapper should auto-increment _id's of type Number.
         autoIncrementNumberIds: true,
         // By default print errors to the console.
