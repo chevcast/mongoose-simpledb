@@ -2,344 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef0f4dca-c68f-419d-aa38-8545c4e0d00c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\History.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\contRun.sh" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\aggregate\aggregate.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\aggregate\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\aggregate\person.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\doc-methods.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\express\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\express\connection-sharing\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\express\connection-sharing\app.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\express\connection-sharing\modelA.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\express\connection-sharing\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\express\connection-sharing\routes.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\geospatial\geoJSONSchema.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\geospatial\geoJSONexample.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\geospatial\geospatial.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\geospatial\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\geospatial\person.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\globalschemas\gs_example.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\globalschemas\person.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\lean\lean.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\lean\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\lean\person.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\mapreduce\mapreduce.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\mapreduce\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\mapreduce\person.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\population\population-across-three-collections.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\population\population-basic.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\population\population-of-existing-doc.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\population\population-of-multiple-existing-docs.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\population\population-options.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\population\population-plain-objects.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\promises\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\promises\person.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\promises\promise.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\querybuilder\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\querybuilder\person.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\querybuilder\querybuilder.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\replicasets\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\replicasets\person.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\replicasets\replica-sets.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\schema\schema.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\schema\storing-schemas-as-json\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\schema\storing-schemas-as-json\schema.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\statics\person.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\examples\statics\statics.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\aggregate.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\collection.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\connection.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\connectionstate.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\document.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\drivers\SPEC.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\drivers\node-mongodb-native\binary.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\drivers\node-mongodb-native\connection.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\drivers\node-mongodb-native\objectid.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\error.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\error\cast.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\error\divergentArray.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\error\messages.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\error\missingSchema.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\error\overwriteModel.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\error\validation.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\error\validator.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\error\version.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\internal.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\model.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\promise.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\query.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\queryhelpers.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\querystream.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schema.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schema\array.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schema\boolean.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schema\buffer.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schema\date.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schema\documentarray.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schema\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schema\mixed.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schema\number.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schema\objectid.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schema\string.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schemadefault.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\schematype.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\statemachine.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\types\array.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\types\buffer.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\types\documentarray.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\types\embedded.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\types\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\types\objectid.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\utils.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\lib\virtualtype.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\hooks\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\hooks\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\hooks\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\hooks\hooks.alt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\hooks\hooks.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\hooks\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\hooks\test.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\admin.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\auth\mongodb_cr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\auth\mongodb_gssapi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\auth\mongodb_plain.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\auth\mongodb_sspi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\collection.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\base_command.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\db_command.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\delete_command.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\get_more_command.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\insert_command.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\kill_cursor_command.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\query_command.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\commands\update_command.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\base.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\connection.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\connection_pool.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\connection_utils.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\mongos.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\read_preference.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\ha.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\options.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\repl_set.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\repl_set_state.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\strategies\ping_strategy.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\repl_set\strategies\statistics_strategy.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\server.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\connection\url_parser.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\cursor.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\cursorstream.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\db.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\gridfs\chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\gridfs\grid.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\gridfs\gridstore.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\gridfs\readstream.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\mongo_client.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\responses\mongo_reply.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\lib\mongodb\utils.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\binding.gyp" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\browser_build\bson.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\browser_build\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\build_browser.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\builderror.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\bson.cc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\bson.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\win32\ia32\bson.node" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\win32\x64\bson.node" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\ext\wscript" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\binary.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\binary_parser.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\bson.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\code.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\db_ref.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\double.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\float_parser.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\long.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\max_key.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\min_key.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\objectid.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\symbol.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\lib\bson\timestamp.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\gleak.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\jasmine-1.1.0\MIT.LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\jasmine-1.1.0\jasmine-html.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\jasmine-1.1.0\jasmine.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\jasmine-1.1.0\jasmine.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\bson\tools\jasmine-1.1.0\jasmine_favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\binding.gyp" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\builderror.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\auth_processes\mongodb.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\base64.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\base64.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberos.cc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberos.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberos.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberos_context.cc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberos_context.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberosgss.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\kerberosgss.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\sspi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\base64.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\base64.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\kerberos.cc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\kerberos.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\kerberos_sspi.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\kerberos_sspi.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\worker.cc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\worker.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer.cc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer_descriptor.cc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer_descriptor.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_buffer_descriptor.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_context.cc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_context.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_context.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_credentials.cc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_credentials.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\win32\wrappers\security_credentials.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\worker.cc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\lib\worker.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\test\kerberos_tests.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\test\kerberos_win32_test.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\test\win32\security_buffer_descriptor_tests.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\test\win32\security_buffer_tests.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\node_modules\kerberos\test\win32\security_credentials_tests.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mongodb\t.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpath\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpath\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpath\History.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpath\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpath\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpath\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpath\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpath\lib\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpath\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpath\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpromise\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpromise\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpromise\History.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpromise\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpromise\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpromise\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpromise\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpromise\lib\promise.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpromise\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpromise\test\promise.test.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mpromise\test\promises-A.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\History.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\lib\collection\collection.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\lib\collection\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\lib\collection\node.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\lib\env.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\lib\mquery.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\lib\permissions.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\lib\utils.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\History.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\debug.component.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\debug.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\example\app.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\example\browser.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\example\wildcards.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\example\worker.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\head.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\lib\debug.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\node_modules\debug\tail.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\test\collection\browser.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\test\collection\mongo.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\test\collection\node.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\test\env.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\mquery\test\utils.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\ms\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\ms\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\ms\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\ms\ms.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\ms\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\ms\test\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\ms\test\support\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\ms\test\test.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\muri\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\muri\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\muri\History.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\muri\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\muri\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\muri\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\muri\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\muri\lib\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\muri\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\muri\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\regexp-clone\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\regexp-clone\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\regexp-clone\History.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\regexp-clone\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\regexp-clone\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\regexp-clone\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\regexp-clone\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\regexp-clone\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\regexp-clone\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\History.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\bench.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\component.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\lib\sliced.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\node_modules\sliced\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\release-items.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\static.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose\website.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\.idea\mongoose-dbcontext.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\extend\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\extend\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\extend\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\extend\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\extend\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose-auto-increment\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose-auto-increment\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose-auto-increment\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose-auto-increment\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose-auto-increment\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose-auto-increment\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose-auto-increment\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose-auto-increment\test\mocha.opts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Code\mongoose-dbwrapper\node_modules\mongoose-auto-increment\test\test.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mongoose-dbcontext.iws" />
@@ -363,10 +45,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="24" selection-start="581" selection-end="581" vertical-scroll-proportion="0.55291575" vertical-offset="67" max-vertical-offset="1649">
+            <state line="19" column="24" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
               <folding />
             </state>
           </provider>
@@ -381,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="8" selection-start="3509" selection-end="3937" vertical-scroll-proportion="0.0" vertical-offset="1696" max-vertical-offset="2159">
+            <state line="41" column="23" selection-start="1844" selection-end="1844" vertical-scroll-proportion="0.8898488" vertical-offset="353" max-vertical-offset="2346">
               <folding />
             </state>
           </provider>
@@ -412,8 +94,8 @@
         <option value="$PROJECT_DIR$/db/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -599,16 +281,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="8" selection-start="3509" selection-end="3937" vertical-scroll-proportion="0.0" vertical-offset="1696" max-vertical-offset="2159">
+        <state line="19" column="24" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="24" selection-start="581" selection-end="581" vertical-scroll-proportion="0.55291575" vertical-offset="67" max-vertical-offset="1649">
+        <state line="41" column="23" selection-start="1844" selection-end="1844" vertical-scroll-proportion="0.8898488" vertical-offset="353" max-vertical-offset="2346">
           <folding />
         </state>
       </provider>

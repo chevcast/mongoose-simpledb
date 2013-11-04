@@ -112,3 +112,14 @@ Any of these can be overridden as needed.
 ## Auto-incrementing IDs.
 
 One feature that Mongoose/MongoDB lack out of the box is the ability to automatically increment a simple integer ID with each new document added to the database. I wrote a mongoose plugin called [mongoose-auto-increment](http://github.com/Chevex/mongoose-auto-increment) that enables this functionality. If you explicitly declare the `_id` field on your schema as type `Number` then dbwrapper will automatically invoke the mongoose-auto-increment plugin for that model.
+
+    exports.schema = {
+        _id: Number, // Causes dbwrapper to auto-increment _id for new documents.
+        creator: { type: Schema.Types.ObjectId, ref: 'User' },
+        blogPost: { type: Number, ref: 'BlogPost' },
+        url: String,
+        body: String,
+        date: { type: Date, default: Date.now },
+        editedDate: Date,
+        editedBy: { type: Schema.Types.ObjectId, ref: 'User' }
+    };
