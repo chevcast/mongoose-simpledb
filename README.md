@@ -1,6 +1,6 @@
 # mongoose-simpledb
 
-[![Build Status](https://travis-ci.org/Chevex/mongoose-simpledb.png)](https://travis-ci.org/Chevex/mongoose-simpledb)
+[![Build Status](https://travis-ci.org/chevex/mongoose-simpledb.png)](https://travis-ci.org/chevex/mongoose-simpledb)
 [![Dependencies Status](https://gemnasium.com/Chevex/mongoose-simpledb.png)](https://gemnasium.com/Chevex/mongoose-simpledb)
 [![NPM version](https://badge.fury.io/js/mongoose-simpledb.png)](http://badge.fury.io/js/simpledb)
 
