@@ -10,7 +10,7 @@
 
 > npm install mongoose-simpledb
 
-After installing simpledb you'll want to define a few mongoose models. By default simpledb looks in the root of your project for a directory called "dbmodels" and will load all model files found there. However, you can place your models wherever you wish and pass the location in simpledb's options. Let's look at an example model file.
+After installing simpledb you'll want to define your mongoose models. By default simpledb looks in the root of your project for a directory called "dbmodels" and will load all model files found there. However, you can place your models wherever you wish and pass the location in simpledb's options. Let's look at an example model file.
 
     // dbmodels/Comment.js
 
@@ -65,12 +65,41 @@ Virtuals:
         }
     };
 
-Once you have a model file you can get reference to dbwrapper and call its `init` function. You can pass a callback function to `init` that will receive the `db` object when all of your models have finished being loaded into it. Or you can assign the results of the `init` function to a variable which will be lazy-loaded with your models when they are done being loaded;
+You can see that when specifying virtuals you can include both "get" and/or "set" as needed for that virtual property. You can also use dot notation with your instance methods in virtuals. Just replace the method/virtual name with a string and use dots.
+
+    // dbmodels/Person.js
+
+    exports.schema = {
+        name: {
+            first: String,
+            last: String
+        }
+    };
+
+    exports.virtuals = {
+        "name.full": {
+            get: function () {
+                return this.name.first + ' ' + this.name.last;
+            },
+            set: function (fullName) {
+                if (fullName.indexOf(' ') !== -1) {
+                    var segments = fullName.split(' ');
+                    this.name.first = segments[0];
+                    this.name.last = segments[1];
+                } else {
+                    this.name.first = fullName;
+                }
+            }
+        }
+    };
+
+Once you have a model file you can get reference to simpledb and call its `init` function. You can pass a callback function to `init` that will receive the `db` object when all of your models have finished being loaded into it. Or you can assign the results of the `init` function to a variable which will be lazy-loaded with your models when they are done being loaded;
 
 Callback:
 
     var simpledb = require('mongoose-simpledb');
-    simpledb.init(function (db) {
+    simpledb.init(function (err, db) {
+        if (err) return console.error(err);
         // You can safely assume that db is populated with your models.
         db.Comment.find({ blogPost: 123 }, ...):
     });
@@ -100,9 +129,7 @@ Available Options and their default values:
         // The path to the directory where your models are stored.
         modelsDir: path.join(__dirname, '..', '..', 'dbmodels'),
         // Whether or not simpledb should auto-increment _id's of type Number.
-        autoIncrementNumberIds: true,
-        // By default print errors to the console.
-        error: console.error.bind(console)
+        autoIncrementNumberIds: true
     }
 
 Any of these can be overridden as needed.
