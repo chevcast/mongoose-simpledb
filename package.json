@@ -1,5 +1,5 @@
 {
-  "name": "mongoose-dbwrapper",
+  "name": "mongoose-simpledb",
   "version": "1.0.0",
   "description": "Simple API for defining mongoose dbmodels and loading them into a single object for easy access.",
   "main": "index.js",
