@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "extend": "*",
+    "mongoose": "*",
     "mongoose-auto-increment": "*"
   },
   "devDependencies": {
@@ -16,9 +17,6 @@
   },
   "scripts": {
     "test": "mocha"
-  },
-  "peerDependencies": {
-    "mongoose": "*"
   },
   "repository": {
     "type": "git",
