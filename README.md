@@ -14,14 +14,16 @@ After installing simpledb you'll want to define your mongoose models. By default
 
     // dbmodels/Comment.js
 
+    var ObjectId = require('mongoose').Schema.Types.ObjectId;
+
     exports.schema = {
-        creator: { type: Schema.Types.ObjectId, ref: 'User' },
+        creator: { type: ObjectId, ref: 'User' },
         blogPost: { type: Number, ref: 'BlogPost' },
         url: String,
         body: String,
         date: { type: Date, default: Date.now },
         editedDate: Date,
-        editedBy: { type: Schema.Types.ObjectId, ref: 'User' }
+        editedBy: { type: ObjectId, ref: 'User' }
     };
 
 The only requirement of a model file is that you expose a property called `schema`. simpledb will use this property when creating your Mongoose schema. While `schema` is the only required property for you to define, you can define a few others as well if you'd like to setup instance methods, static methods, or virtual properties.
