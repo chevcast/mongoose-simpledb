@@ -16,29 +16,28 @@ module.exports = exports = {
                 callback = arguments[1];
                 break;
         }
+
         var db = { modelsLoaded: false },
             settings = {
                 // The mongoose connection string to use.
-                connectionString: 'mongodb:\\localhost',
-                // The path to the directory where your models are stored.
+                connectionString: 'mongodb://localhost/mongoose-simpledb-test',
+                // The path to the directory where your dbmodels are stored.
                 modelsDir: path.join(__dirname, '..', '..', 'dbmodels'),
                 // Whether or not dbwrapper should auto-increment _id's of type Number.
-                autoIncrementNumberIds: true,
-                // By default print errors to the console.
-                error: console.error.bind(console)
+                autoIncrementNumberIds: true
             };
         if (options)
             extend(settings, options);
-        var conn = mongoose.createConnection(settings.connectionString, { server: { socketOptions: { keepAlive: 1 } } });
-        conn.on('error', console.error);
-        conn.once('open', function () {
+        db.connection = mongoose.createConnection(settings.connectionString, { server: { socketOptions: { keepAlive: 1 } } });
+        db.connection.on('error', callback);
+        db.connection.once('open', function () {
             // If mongoose-auto-increment plugin is installedInitialize mongoose-auto-increment plugin.
             if (settings.autoIncrementNumberIds)
-                autoIncrement.initialize(conn);
+                autoIncrement.initialize(db.connection);
 
-            // Find and load all Mongoose models from the models directory.
+            // Find and load all Mongoose dbmodels from the dbmodels directory.
             fs.readdir(settings.modelsDir, function (err, files) {
-                if (err) return settings.error(err);
+                if (err) return callback(err);
                 files.forEach(function (file) {
                     if (path.extname(file) === '.js') {
                         var modelName = path.basename(file.replace(path.extname(file), '')),
@@ -68,12 +67,12 @@ module.exports = exports = {
                         }
 
                         // If autoIncrementIds:true then utilize mongoose-auto-increment plugin for this model.
-                        if(settings.autoIncrementNumberIds)
+                        if (settings.autoIncrementNumberIds)
                             if (schema.paths.hasOwnProperty('_id') && schema.paths._id.instance === 'Number')
                                 schema.plugin(autoIncrement.plugin, modelName);
 
                         // Store model in db API.
-                        db[modelName] = conn.model(modelName, schema);
+                        db[modelName] = db.connection.model(modelName, schema);
                     }
                 });
 
@@ -81,8 +80,7 @@ module.exports = exports = {
                 db.modelsLoaded = true;
 
                 // Invoke callback with resulting db object.
-                if (callback)
-                    callback(db);
+                if (callback) callback(null, db);
             });
         });
 

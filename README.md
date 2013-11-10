@@ -1,16 +1,16 @@
-# mongoose-dbwrapper
+# mongoose-simpledb
 
-[![Build Status](https://travis-ci.org/Chevex/mongoose-dbwrapper.png)](https://travis-ci.org/Chevex/mongoose-dbwrapper)
-[![Dependencies Status](https://gemnasium.com/Chevex/mongoose-dbwrapper.png)](https://gemnasium.com/Chevex/mongoose-dbwrapper)
-[![NPM version](https://badge.fury.io/js/mongoose-dbwrapper.png)](http://badge.fury.io/js/dbwrapper)
+[![Build Status](https://travis-ci.org/Chevex/mongoose-simpledb.png)](https://travis-ci.org/Chevex/mongoose-simpledb)
+[![Dependencies Status](https://gemnasium.com/Chevex/mongoose-simpledb.png)](https://gemnasium.com/Chevex/mongoose-simpledb)
+[![NPM version](https://badge.fury.io/js/mongoose-simpledb.png)](http://badge.fury.io/js/simpledb)
 
 > Simple API for defining mongoose models and loading them into a single object for easy access.
 
 ## Getting Started
 
-> npm install mongoose-dbwrapper
+> npm install mongoose-simpledb
 
-After installing dbwrapper you'll want to define a few mongoose models. By default dbwrapper looks in the root of your project for a directory called "dbmodels" and will load all model files found there. However, you can place your models wherever you wish and pass the location in dbwrapper's options. Let's look at an example model file.
+After installing simpledb you'll want to define a few mongoose models. By default simpledb looks in the root of your project for a directory called "dbmodels" and will load all model files found there. However, you can place your models wherever you wish and pass the location in simpledb's options. Let's look at an example model file.
 
     // dbmodels/Comment.js
 
@@ -24,7 +24,7 @@ After installing dbwrapper you'll want to define a few mongoose models. By defau
         editedBy: { type: Schema.Types.ObjectId, ref: 'User' }
     };
 
-The only requirement of a model file is that you expose a property called `schema`. dbwrapper will use this property when creating your Mongoose schema. While `schema` is the only required property for you to define, you can define a few others as well if you'd like to setup instance methods, static methods, or virtual properties.
+The only requirement of a model file is that you expose a property called `schema`. simpledb will use this property when creating your Mongoose schema. While `schema` is the only required property for you to define, you can define a few others as well if you'd like to setup instance methods, static methods, or virtual properties.
 
 Instance methods:
 
@@ -69,16 +69,16 @@ Once you have a model file you can get reference to dbwrapper and call its `init
 
 Callback:
 
-    var dbwrapper = require('mongoose-dbwrapper');
-    dbwrapper.init(function (db) {
+    var simpledb = require('mongoose-simpledb');
+    simpledb.init(function (db) {
         // You can safely assume that db is populated with your models.
         db.Comment.find({ blogPost: 123 }, ...):
     });
 
 Lazy-loaded reference:
 
-    var dbwrapper = require('mongoose-dbwrapper');
-    var db = dbwrapper.init();
+    var simpledb = require('mongoose-simpledb');
+    var db = simpledb.init();
     // After a time...
     db.Comment.find({ blogPost: 123 }, ...);
 
@@ -90,7 +90,7 @@ If you prefer to use the lazy-loaded option then you can check `db.modelsLoaded`
 
 An options object can be passed to the `init` function.
 
-    dbwrapper.init(options, callback);
+    simpledb.init(options, callback);
 
 Available Options and their default values:
 
@@ -99,7 +99,7 @@ Available Options and their default values:
         connectionString: 'mongodb:\\localhost',
         // The path to the directory where your models are stored.
         modelsDir: path.join(__dirname, '..', '..', 'dbmodels'),
-        // Whether or not dbwrapper should auto-increment _id's of type Number.
+        // Whether or not simpledb should auto-increment _id's of type Number.
         autoIncrementNumberIds: true,
         // By default print errors to the console.
         error: console.error.bind(console)
@@ -111,10 +111,10 @@ Any of these can be overridden as needed.
 
 ## Auto-incrementing IDs.
 
-One feature that Mongoose/MongoDB lack out of the box is the ability to automatically increment a simple integer ID with each new document added to the database. I wrote a mongoose plugin called [mongoose-auto-increment](http://github.com/Chevex/mongoose-auto-increment) that enables this functionality. If you explicitly declare the `_id` field on your schema as type `Number` then dbwrapper will automatically invoke the mongoose-auto-increment plugin for that model.
+One feature that Mongoose/MongoDB lack out of the box is the ability to automatically increment a simple integer ID with each new document added to the database. I wrote a mongoose plugin called [mongoose-auto-increment](http://github.com/Chevex/mongoose-auto-increment) that enables this functionality. If you explicitly declare the `_id` field on your schema as type `Number` then simpledb will automatically invoke the mongoose-auto-increment plugin for that model.
 
     exports.schema = {
-        _id: Number, // Causes dbwrapper to auto-increment _id for new documents.
+        _id: Number, // Causes simpledb to auto-increment _id for new documents.
         creator: { type: Schema.Types.ObjectId, ref: 'User' },
         blogPost: { type: Number, ref: 'BlogPost' },
         url: String,

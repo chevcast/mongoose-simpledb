@@ -1,7 +1,7 @@
 {
   "name": "mongoose-dbwrapper",
   "version": "0.0.1",
-  "description": "Simple API for defining mongoose models and loading them into a single object for easy access.",
+  "description": "Simple API for defining mongoose dbmodels and loading them into a single object for easy access.",
   "main": "index.js",
   "dependencies": {
     "extend": "*",
@@ -9,7 +9,10 @@
   },
   "devDependencies": {
       "mocha": "*",
-      "chai": "*"
+      "chai": "*",
+      "moment": "*",
+      "marked": "*",
+      "async": "*"
   },
   "scripts": {
     "test": "mocha"
