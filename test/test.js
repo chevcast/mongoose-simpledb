@@ -1,23 +1,53 @@
 var should = require('chai').should(),
     simpledb = require('..'),
     async = require('async'),
-    path = require('path');
+    path = require('path'),
+    options = {
+        modelsDir: path.join(__dirname, 'dbmodels')
+    },
+    _db;
+
+after(function (done) {
+    _db.connection.db.executeDbCommand({ dropDatabase: 1 }, done);
+});
 
 describe("simpledb", function () {
 
-    describe("returned db object", function () {
+    describe("init", function () {
 
-        var _db;
+        it("should invoke our callback and pass in a db object with our models loaded.", function (done) {
+
+            simpledb.init(options, function (err, db) {
+                should.not.exist(err);
+                should.exist(db);
+                db.should.have.property('modelsLoaded', true);
+                done();
+            });
+
+        });
+
+        it ("should return a db object that is lazy-loaded with our models.", function (done) {
+
+            var db = simpledb.init(options, function (err) {
+                should.not.exist(err);
+                db.should.have.property('modelsLoaded', true);
+                done();
+            });
+            should.exist(db);
+            db.should.have.property('modelsLoaded', false);
+
+        });
+
+    });
+
+    describe("db object", function () {
+
         before(function (done) {
-            simpledb.init({ modelsDir: path.join(__dirname, 'dbmodels') }, function (err, db) {
+            simpledb.init(options, function (err, db) {
                 if (err) return done(err);
                 _db = db;
                 done();
             });
-        });
-
-        after(function (done) {
-            _db.connection.db.executeDbCommand({ dropDatabase: 1 }, done);
         });
 
         it("should load all dbmodels and attach them to a single object.", function () {

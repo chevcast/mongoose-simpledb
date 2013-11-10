@@ -23,7 +23,7 @@ module.exports = exports = {
                 connectionString: 'mongodb://localhost/mongoose-simpledb-test',
                 // The path to the directory where your dbmodels are stored.
                 modelsDir: path.join(__dirname, '..', '..', 'dbmodels'),
-                // Whether or not dbwrapper should auto-increment _id's of type Number.
+                // Whether or not simpledb should auto-increment _id's of type Number.
                 autoIncrementNumberIds: true
             };
         if (options)
