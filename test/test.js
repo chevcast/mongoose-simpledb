@@ -43,11 +43,13 @@ describe("simpledb", function () {
     describe("db object", function () {
 
         before(function (done) {
+
             simpledb.init(options, function (err, db) {
                 if (err) return done(err);
                 _db = db;
                 done();
             });
+
         });
 
         it("should load all dbmodels and attach them to a single object.", function () {

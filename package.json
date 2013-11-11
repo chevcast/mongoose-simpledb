@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Chevex/mongoose-dbwrapper.git"
+    "url": "git://github.com/Chevex/mongoose-simpledb.git"
   },
   "keywords": [
     "mongoose"
@@ -28,6 +28,6 @@
   "author": "Alex Ford",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Chevex/mongoose-dbwrapper/issues"
+    "url": "https://github.com/Chevex/mongoose-simpledb/issues"
   }
 }
