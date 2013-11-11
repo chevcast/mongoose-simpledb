@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/chevex/mongoose-simpledb.png)](https://travis-ci.org/chevex/mongoose-simpledb)
 [![Dependencies Status](https://gemnasium.com/Chevex/mongoose-simpledb.png)](https://gemnasium.com/Chevex/mongoose-simpledb)
-[![NPM version](https://badge.fury.io/js/mongoose-simpledb.png)](http://badge.fury.io/js/simpledb)
+[![NPM version](https://badge.fury.io/js/mongoose-simpledb.png)](http://badge.fury.io/js/mongoose-simpledb)
 
 > Simple API for defining mongoose models and loading them into a single object for easy access.
 
@@ -138,7 +138,7 @@ Any of these can be overridden as needed.
 
 ---
 
-## Auto-incrementing IDs.
+## Auto-Incrementing IDs.
 
 One feature that Mongoose/MongoDB lack out of the box is the ability to automatically increment a simple integer ID with each new document added to the database. I wrote a mongoose plugin called [mongoose-auto-increment](http://github.com/Chevex/mongoose-auto-increment) that enables this functionality. If you explicitly declare the `_id` field on your schema as type `Number` then simpledb will automatically invoke the mongoose-auto-increment plugin for that model.
 
