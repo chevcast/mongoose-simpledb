@@ -25,10 +25,28 @@ After installing simpledb you'll want to define your mongoose models. By default
         editedDate: Date,
         editedBy: { type: ObjectId, ref: 'User' }
     };
+    
+Once you have a model file you can get reference to simpledb and call its `init` function. You can pass a callback function to `init` that will receive the `db` object when all of your models have finished being loaded into it. Or you can assign the results of the `init` function to a variable which will be lazy-loaded with your models when they are done being loaded;
 
-The only requirement of a model file is that you expose a property called `schema`. simpledb will use this property when creating your Mongoose schema. While `schema` is the only required property for you to define, you can define a few others as well if you'd like to setup instance methods, static methods, or virtual properties.
+Callback:
 
-Instance methods:
+    var simpledb = require('mongoose-simpledb');
+    simpledb.init(function (err, db) {
+        if (err) return console.error(err);
+        // You can safely assume that db is populated with your models.
+        db.Comment.find({ blogPost: 123 }, ...):
+    });
+
+Lazy-loaded reference:
+
+    var simpledb = require('mongoose-simpledb');
+    var db = simpledb.init();
+    // After a time...
+    db.Comment.find({ blogPost: 123 }, ...);
+
+If you prefer to use the lazy-loaded option then you can check `db.modelsLoaded` to see if the object is ready to be used. The only requirement of a model file is that you expose a property called `schema`. simpledb will use this property when creating your Mongoose schema. While `schema` is the only required property for you to define, you can define a few others as well if you'd like to setup instance methods, static methods, or virtual properties.
+
+## Need instance methods?
 
     exports.methods = {
         dateFromNow: function () {
@@ -39,7 +57,7 @@ Instance methods:
         }
     };
 
-Static methods:
+## What about statics?
 
     exports.statics = {
         tenMostRecent: function (blogPostId, callback) {
@@ -47,7 +65,7 @@ Static methods:
         }
     };
 
-Virtuals:
+## Yes, you can even define virtual properties.
 
     exports.virtuals = {
         bodyHtml: {
@@ -94,28 +112,6 @@ You can see that when specifying virtuals you can include both "get" and/or "set
             }
         }
     };
-
-Once you have a model file you can get reference to simpledb and call its `init` function. You can pass a callback function to `init` that will receive the `db` object when all of your models have finished being loaded into it. Or you can assign the results of the `init` function to a variable which will be lazy-loaded with your models when they are done being loaded;
-
-Callback:
-
-    var simpledb = require('mongoose-simpledb');
-    simpledb.init(function (err, db) {
-        if (err) return console.error(err);
-        // You can safely assume that db is populated with your models.
-        db.Comment.find({ blogPost: 123 }, ...):
-    });
-
-Lazy-loaded reference:
-
-    var simpledb = require('mongoose-simpledb');
-    var db = simpledb.init();
-    // After a time...
-    db.Comment.find({ blogPost: 123 }, ...);
-
-If you prefer to use the lazy-loaded option then you can check `db.modelsLoaded` to see if the object is ready to be used.
-
----
 
 ## Options
 
