@@ -38,6 +38,26 @@ describe("simpledb", function () {
 
         });
 
+        it("should allow us to pass a connection string in instead of an options object.", function (done) {
+            simpledb.init('mongodb://localhost/mongoose-simpledb-test', function (err) {
+                // We aren't specifying a models directory and the default models directory doesn't exist so this
+                // should fail with a "readdir" error.
+                should.exist(err);
+                err.message.should.match(/^ENOENT, readdir/);
+                done();
+            });
+        });
+
+        it("should still invoke our callback if it is passed as the first and only argument.", function (done) {
+            simpledb.init(function (err) {
+                // We aren't specifying a models directory and the default models directory doesn't exist so this
+                // should fail with a "readdir" error.
+                should.exist(err);
+                err.message.should.match(/^ENOENT, readdir/);
+                done();
+            });
+        });
+
     });
 
     describe("db object", function () {

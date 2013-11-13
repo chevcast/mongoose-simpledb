@@ -26,8 +26,12 @@ module.exports = exports = {
                 // Whether or not simpledb should auto-increment _id's of type Number.
                 autoIncrementNumberIds: true
             };
-        if (options)
+
+        if (options) {
+            // If options is a string then set it to an object, using the string as the value for connectionString.
+            if (typeof options === 'string') options = { connectionString: options };
             extend(settings, options);
+        }
         db.connection = mongoose.createConnection(settings.connectionString, { server: { socketOptions: { keepAlive: 1 } } });
         db.connection.on('error', callback);
         db.connection.once('open', function () {
