@@ -90,5 +90,6 @@ module.exports = exports = {
 
         // Return db object immediately in case the app would like a lazy-loaded reference.
         return db;
-    }
+    },
+    Types: mongoose.Schema.Types
 };

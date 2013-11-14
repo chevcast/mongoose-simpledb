@@ -134,17 +134,25 @@ Any of these can be overridden as needed.
 
 ---
 
-## Auto-Incrementing IDs.
+## Need a reference to `ObjectId` or other mongoose types?
+
+One goal of simpledb is to hide mongoose so that you never have to install it or `require` it yourself. One problem with this is that sometimes you need access to mongoose's types. For this reason simpledb exposes `mongoose.Schema.Types` as `simpledb.Types`.
+
+    var ObjectId = require('mongoose-simpledb').Types;
+
+Then you can use it in your schemas.
+
+    exports.schema = {
+        creator: { type: ObjectId, ref: 'User' }
+    };
+
+---
+
+## Want to get rid of `ObjectId` altogether and use a simple incrementing `Number` `_id`?
 
 One feature that Mongoose/MongoDB lack out of the box is the ability to automatically increment a simple integer ID with each new document added to the database. I wrote a mongoose plugin called [mongoose-auto-increment](http://github.com/Chevex/mongoose-auto-increment) that enables this functionality. If you explicitly declare the `_id` field on your schema as type `Number` then simpledb will automatically invoke the mongoose-auto-increment plugin for that model.
 
     exports.schema = {
         _id: Number, // Causes simpledb to auto-increment _id for new documents.
-        creator: { type: Schema.Types.ObjectId, ref: 'User' },
-        blogPost: { type: Number, ref: 'BlogPost' },
-        url: String,
-        body: String,
-        date: { type: Date, default: Date.now },
-        editedDate: Date,
-        editedBy: { type: Schema.Types.ObjectId, ref: 'User' }
+        creator: { type: Number, ref: 'User' }
     };
