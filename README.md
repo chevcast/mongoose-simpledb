@@ -10,6 +10,8 @@
 
 > npm install mongoose-simpledb
 
+Note: You do not need to install mongoose. Simpledb is intended to hide mongoose so you never have to install or require it.
+
 After installing simpledb you'll want to define your mongoose models. By default simpledb looks in the root of your project for a directory called "dbmodels" and will load all model files found there. However, you can place your models wherever you wish and pass the location in simpledb's options. Let's look at an example model file.
 
     // dbmodels/Comment.js
@@ -138,7 +140,7 @@ Any of these can be overridden as needed.
 
 One goal of simpledb is to hide mongoose so that you never have to install it or `require` it yourself. One problem with this is that sometimes you need access to mongoose's types. For this reason simpledb exposes `mongoose.Schema.Types` as `simpledb.Types`.
 
-    var ObjectId = require('mongoose-simpledb').Types;
+    var ObjectId = require('mongoose-simpledb').Types.ObjectId;
 
 Then you can use it in your schemas.
 
