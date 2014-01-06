@@ -43,7 +43,7 @@ describe("simpledb", function () {
                 // We aren't specifying a models directory and the default models directory doesn't exist so this
                 // should fail with a "readdir" error.
                 should.exist(err);
-                err.message.should.match(/^ENOENT, readdir/);
+                err.message.substr(0, 15).should.equal('ENOENT, readdir');
                 done();
             });
         });
@@ -53,7 +53,7 @@ describe("simpledb", function () {
                 // We aren't specifying a models directory and the default models directory doesn't exist so this
                 // should fail with a "readdir" error.
                 should.exist(err);
-                err.message.should.match(/^ENOENT, readdir/);
+                err.message.substr(0, 15).should.equal('ENOENT, readdir');
                 done();
             });
         });
