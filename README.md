@@ -16,7 +16,7 @@ After installing simpledb you'll want to define your mongoose models. By default
 
     // dbmodels/Comment.js
 
-    var ObjectId = require('mongoose').Schema.Types.ObjectId;
+    var ObjectId = require('mongoose-simpledb').Types.ObjectId;
 
     exports.schema = {
         creator: { type: ObjectId, ref: 'User' },
