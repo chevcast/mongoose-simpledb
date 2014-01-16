@@ -15,19 +15,20 @@ describe("simpledb", function () {
 
     describe("init", function () {
 
-        it("should invoke our callback and pass in a db object with our models loaded.", function (done) {
+        afterEach(function () {
 
+        });
+
+        it("should invoke our callback and pass in a db object with our models loaded.", function (done) {
             simpledb.init(options, function (err, db) {
                 should.not.exist(err);
                 should.exist(db);
                 db.should.have.property('modelsLoaded', true);
                 done();
             });
-
         });
 
         it ("should return a db object that is lazy-loaded with our models.", function (done) {
-
             var db = simpledb.init(options, function (err) {
                 should.not.exist(err);
                 db.should.have.property('modelsLoaded', true);
@@ -35,10 +36,9 @@ describe("simpledb", function () {
             });
             should.exist(db);
             db.should.have.property('modelsLoaded', false);
-
         });
 
-        it("should allow us to pass a connection string in instead of an options object.", function (done) {
+        it("should allow us to pass in just a connection", function (done) {
             simpledb.init('mongodb://localhost/mongoose-simpledb-test', function (err) {
                 // We aren't specifying a models directory and the default models directory doesn't exist so this
                 // should fail with a "readdir" error.
@@ -58,35 +58,52 @@ describe("simpledb", function () {
             });
         });
 
+        it("should store connections internally and expose them on the module.", function (done) {
+            simpledb.reset(function (err) {
+                should.not.exist(err);
+                simpledb.init(options, function (err, db1) {
+                    should.not.exist(err);
+                    should.exist(db1);
+                    db1.should.have.property('name', 'db1');
+                    simpledb.init({
+                        name: 'connection2',
+                        modelsDir: options.modelsDir
+                    }, function (err, db2) {
+                        should.not.exist(err);
+                        should.exist(db2);
+                        db2.should.have.property('name', 'connection2');
+                        simpledb.should.have.property('dbs');
+                        Object.keys(simpledb.dbs).length.should.equal(2);
+                        should.exist(simpledb.dbs[db1.name]);
+                        should.exist(simpledb.dbs['connection2']);
+                        done();
+                    });
+                });
+            });
+        });
+
     });
 
     describe("db object", function () {
 
         before(function (done) {
-
             simpledb.init(options, function (err, db) {
                 if (err) return done(err);
                 _db = db;
                 done();
             });
-
         });
 
         it("should load all dbmodels and attach them to a single object.", function () {
-
             _db.should.have.property('Book').with.property('modelName', 'Book');
             _db.should.have.property('Author').with.property('modelName', 'Author');
-
         });
 
         it("should attach any static methods to the model.", function () {
-
             _db.Book.should.have.property('findByAuthor').and.be.a('function');
-
         });
 
         it("should attach any instance methods to the model.", function () {
-
             // Arrange
             var book = new _db.Book(),
                 author = new _db.Author();
@@ -95,11 +112,9 @@ describe("simpledb", function () {
             book.should.have.property('formatPublishDate').and.be.a('function');
             author.should.have.property('formatBirthday').and.be.a('function');
             author.should.have.property('bioHtml').and.be.a('function');
-
         });
 
         it("should attach any virtual properties to the model.", function () {
-
             // Arrange
             var author = new _db.Author({
                 name: {
@@ -111,11 +126,9 @@ describe("simpledb", function () {
 
             // Assert
             author.should.have.property('name').with.property('full', 'Alex Ford');
-
         });
 
         it("should use mongoose-auto-increment plugin if _id is set to type \"Number\"", function (done) {
-
             // Arrange
             var book = new _db.Book({
                 title: "The Hobbit",
@@ -140,7 +153,6 @@ describe("simpledb", function () {
                 results.nextCount.should.equal(1);
                 done();
             }
-
         });
 
     });

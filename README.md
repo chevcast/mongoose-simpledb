@@ -172,7 +172,7 @@ exports.schema = {
 
 ## Want to get rid of `ObjectId` altogether and use a simple incrementing `Number` `_id`?
 
-One feature that Mongoose/MongoDB lack out of the box is the ability to automatically increment a simple integer ID with each new document added to the database. I wrote a mongoose plugin called [mongoose-auto-increment](http://github.com/Chevex/mongoose-auto-increment) that enables this functionality. If you explicitly declare the `_id` field on your schema as type `Number` then simpledb will automatically invoke the mongoose-auto-increment plugin for that model.
+Oe feature that Mongoose/MongoDB lack out of the box is the ability to automatically increment a simple integer ID with each new document added to the database. I wrote a mongoose plugin called [mongoose-auto-increment](http://github.com/Chevex/mongoose-auto-increment) that enables this functionality. If you explicitly declare the `_id` field on your schema as type `Number` then simpledb will automatically invoke the mongoose-auto-increment plugin for that model.
 
 ```javascript
 exports.schema = {
@@ -180,3 +180,21 @@ exports.schema = {
     creator: { type: Number, ref: 'User' }
 };
 ```
+
+---
+
+## Tired of passing the `db` around to other areas of your application?
+
+In node modules are cached after they are first grabbed with `require`. Simpledb utilizes this fact to make it extremely easy for you to access your `db` object from anywhere by simply calling `require` again. As long as you've called `init` and enough time has passed for your `db` object's models to be loaded then you can access it.
+
+```javascript
+var simpledb = require('mongoose-simpledb');
+
+simpledb.init(connectionString);
+
+// After a time...
+
+var db = require('mongoose-simpledb').db;
+```
+
+Remember that you can always check `db.modelsLoaded` to ensure that the object is ready to use.
