@@ -58,30 +58,6 @@ describe("simpledb", function () {
             });
         });
 
-        it("should store connections internally and expose them on the module.", function (done) {
-            simpledb.reset(function (err) {
-                should.not.exist(err);
-                simpledb.init(options, function (err, db1) {
-                    should.not.exist(err);
-                    should.exist(db1);
-                    db1.should.have.property('name', 'db1');
-                    simpledb.init({
-                        name: 'connection2',
-                        modelsDir: options.modelsDir
-                    }, function (err, db2) {
-                        should.not.exist(err);
-                        should.exist(db2);
-                        db2.should.have.property('name', 'connection2');
-                        simpledb.should.have.property('dbs');
-                        Object.keys(simpledb.dbs).length.should.equal(2);
-                        should.exist(simpledb.dbs[db1.name]);
-                        should.exist(simpledb.dbs['connection2']);
-                        done();
-                    });
-                });
-            });
-        });
-
     });
 
     describe("db object", function () {
