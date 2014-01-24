@@ -39,7 +39,7 @@ module.exports = exports = {
                 break;
             case 2:
                 // If the first arg is a string and the second is a function then set the connectionString and callback settings.
-                else if (typeof arguments[0] === 'string' && typeof arguments[1] === 'function') {
+                if (typeof arguments[0] === 'string' && typeof arguments[1] === 'function') {
                     settings.connectionString = arguments[0];
                     settings.callback = arguments[1];
                 }
