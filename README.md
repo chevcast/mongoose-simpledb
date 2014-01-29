@@ -185,7 +185,7 @@ exports.schema = {
 
 ## Tired of passing the `db` around to other areas of your application?
 
-In node modules are cached after they are first grabbed with `require`. Simpledb utilizes this fact to make it extremely easy for you to access your `db` object from anywhere by simply calling `require` again. As long as you've called `init` and enough time has passed for your `db` object's models to be loaded then you can access it.
+In node, modules are cached after they are first grabbed with `require`. Simpledb utilizes this fact to make it extremely easy for you to access your `db` object from anywhere by simply calling `require` again. As long as you've called `init` and enough time has passed for your `db` object's models to be loaded then you can access it.
 
 ```javascript
 var simpledb = require('mongoose-simpledb');
