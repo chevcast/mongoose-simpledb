@@ -1,6 +1,6 @@
 {
   "name": "mongoose-simpledb",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "Simple API for defining mongoose dbmodels and loading them into a single object for easy access.",
   "main": "index.js",
   "dependencies": {
