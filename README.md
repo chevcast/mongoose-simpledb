@@ -1,7 +1,7 @@
 # mongoose-simpledb
 
 [![Build Status](https://travis-ci.org/chevex/mongoose-simpledb.png)](https://travis-ci.org/chevex/mongoose-simpledb)
-[![Dependencies Status](https://gemnasium.com/Chevex/mongoose-simpledb.png)](https://gemnasium.com/Chevex/mongoose-simpledb)
+[![Dependencies Status](https://gemnasium.com/chevex/mongoose-simpledb.png)](https://gemnasium.com/chevex/mongoose-simpledb)
 [![NPM version](https://badge.fury.io/js/mongoose-simpledb.png)](http://badge.fury.io/js/mongoose-simpledb)
 
 > Simple API for defining mongoose models and loading them into a single object for easy access.
@@ -198,3 +198,9 @@ var db = require('mongoose-simpledb').db;
 ```
 
 Remember that you can always check `db.modelsLoaded` to ensure that the object is ready to use.
+
+---
+
+Mongoose-simpledb in 30-ish seconds!
+
+[![](http://i.imgur.com/p16GDGP.gif)](http://i.imgur.com/p16GDGP.gif)
