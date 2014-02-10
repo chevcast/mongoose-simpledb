@@ -201,6 +201,6 @@ Remember that you can always check `db.modelsLoaded` to ensure that the object i
 
 ---
 
-Mongoose-simpledb in 30-ish seconds!
+## Mongoose-simpledb in 30-ish seconds!
 
 [![](http://i.imgur.com/p16GDGP.gif)](http://i.imgur.com/p16GDGP.gif)
