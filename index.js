@@ -14,7 +14,7 @@ module.exports = exports = {
                 // Default function is empty and does nothing. It's only here to provide a method signature.
                 callback: function (err, db) {},
                 // The mongoose connection string to use.
-                connectionString: 'mongodb://localhost/mongoose-simpledb-test',
+                connectionString: 'mongodb://localhost/test',
                 // The path to the directory where your dbmodels are stored.
                 modelsDir: path.join(__dirname, '..', '..', 'dbmodels'),
                 // Whether or not simpledb should auto-increment _id's of type Number.
