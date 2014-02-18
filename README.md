@@ -203,6 +203,6 @@ Remember that you can always check `db.modelsLoaded` to ensure that the object i
 
 ## Mongoose-simpledb in 30-ish seconds!
 
-In this screencast graphic you can watch as I wrap a basic [express](http://expressjs.com) app with simpledb. I first wrap the code in app.js inside the `simpledb.init` callback to ensure that `db` is ready to use by the time the server spins up. Next I create a model file at `dbmodels/Person.js` and populate the schema with some basic properties, define a virtual property, and create an example virtual method. Finally, I write a couple quick route handlers invoked by a form page so that I can create a `Person` and retrieve it.
+In this screencast graphic you can watch as I wrap a basic [express](http://expressjs.com) app with simpledb. I first wrap the code in app.js inside the `simpledb.init` callback to ensure that `db` is ready to use by the time the server spins up. Next I create a model file at `dbmodels/Person.js` and populate the schema with some basic properties, define a virtual property, and create an example method. Finally, I write a couple quick route handlers that are invoked by a form page so that I can create a `Person` as well as retrieve it.
 
 [![](http://i.imgur.com/p16GDGP.gif)](http://i.imgur.com/p16GDGP.gif)
