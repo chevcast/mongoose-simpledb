@@ -108,9 +108,8 @@ module.exports = exports = {
                                 schema.plugin(autoIncrement.plugin, modelName);
 
                         // If model name contains an underscore then camelCase it.
-                        var propName = modelName;
+                        var propName = modelName.charAt(0).toUpperCase() + modelName.slice(1);
                         if (propName.indexOf('_') !== -1) {
-                            propName = propName.charAt(0).toUpperCase() + propName.slice(1);
                             propName = propName.replace(/_(.)/g, function (match, letter) {
                                 return letter.toUpperCase();
                             });
