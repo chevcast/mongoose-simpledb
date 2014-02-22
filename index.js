@@ -107,8 +107,17 @@ module.exports = exports = {
                             if (schema.paths.hasOwnProperty('_id') && schema.paths._id.instance === 'Number')
                                 schema.plugin(autoIncrement.plugin, modelName);
 
+                        // If model name contains an underscore then camelCase it.
+                        var propName = modelName;
+                        if (propName.indexOf('_') !== -1) {
+                            propName = propName.charAt(0).toUpperCase() + propName.slice(1);
+                            propName = propName.replace(/_(.)/g, function (match, letter) {
+                                return letter.toUpperCase();
+                            });
+                        }
+
                         // Store model in db API.
-                        db[modelName] = db.connection.model(modelName, schema);
+                        db[propName] = db.connection.model(modelName, schema);
                     }
                 });
 
