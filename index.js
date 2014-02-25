@@ -136,5 +136,8 @@ module.exports = exports = {
     },
     
     // Expose mongoose types for easy access.
-    Types: mongoose.Schema.Types
+    Types: mongoose.Schema.Types,
+
+    // Expose all of mongoose for easy access.
+    mongoose: mongoose
 };
