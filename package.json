@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Chevex/mongoose-simpledb.git"
+    "url": "git://github.com/codetunnel/mongoose-simpledb.git"
   },
   "keywords": [
     "mongoose"
@@ -29,6 +29,6 @@
   "author": "Alex Ford",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Chevex/mongoose-simpledb/issues"
+    "url": "https://github.com/codetunnel/mongoose-simpledb/issues"
   }
 }
