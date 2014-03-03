@@ -1,7 +1,7 @@
 # mongoose-simpledb
 
-[![Build Status](https://travis-ci.org/chevex/mongoose-simpledb.png)](https://travis-ci.org/chevex/mongoose-simpledb)
-[![Dependencies Status](https://gemnasium.com/chevex/mongoose-simpledb.png)](https://gemnasium.com/chevex/mongoose-simpledb)
+[![Build Status](https://travis-ci.org/codetunnel/mongoose-simpledb.png)](https://travis-ci.org/codetunnel/mongoose-simpledb)
+[![Dependencies Status](https://gemnasium.com/codetunnel/mongoose-simpledb.png)](https://gemnasium.com/codetunnel/mongoose-simpledb)
 [![NPM version](https://badge.fury.io/js/mongoose-simpledb.png)](http://badge.fury.io/js/mongoose-simpledb)
 
 > Simple API for defining mongoose models and loading them into a single object for easy access.
