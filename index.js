@@ -75,7 +75,7 @@ module.exports = exports = {
             fs.readdir(settings.modelsDir, function (err, files) {
                 if (err) return settings.callback(err);
                 files.forEach(function (file) {
-                    if (path.extname(file) === '.js') {
+                    if (path.extname(file) === '.js' || path.extname(file) === '.coffee') {
                         var modelName = path.basename(file.replace(path.extname(file), '')),
                             modelData = require(path.join(settings.modelsDir, file));
 
