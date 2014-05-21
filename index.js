@@ -18,7 +18,9 @@ module.exports = exports = {
                 // The path to the directory where your dbmodels are stored.
                 modelsDir: path.join(__dirname, '..', '..', 'dbmodels'),
                 // Whether or not simpledb should auto-increment _id's of type Number.
-                autoIncrementNumberIds: true
+                autoIncrementNumberIds: true,
+                //default options of connect, can be extended, or changed
+                options: { server: { socketOptions: { keepAlive: 1 } } }
             };
 
         switch (arguments.length) {
@@ -55,7 +57,7 @@ module.exports = exports = {
         var db = { modelsLoaded: false };
 
         // Create mongoose connection and attach it to db object.
-        db.connection = mongoose.createConnection(settings.connectionString, { server: { socketOptions: { keepAlive: 1 } } });
+        db.connection = mongoose.createConnection(settings.connectionString, settings.options);
 
         // If a mongoose error occurs then invoke the callback with the error.
         db.connection.on('error', settings.callback);
