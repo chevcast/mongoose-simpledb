@@ -34,7 +34,7 @@ module.exports = exports = {
                         break;
                     // If the only argument is an object, extend settings with the object.
                     case 'object':
-                        extend(settings, options);
+                        extend(settings, arguments[0]);
                 }
                 break;
             case 2:
