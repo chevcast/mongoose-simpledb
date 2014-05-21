@@ -101,6 +101,14 @@ module.exports = exports = {
                                     schema.virtual(key).set(virtualData.set);
                             }
                         }
+                        
+                        //Add plugins to schema
+                        for (var record in modelData.plugins) {
+                            if (!record.hasOwnProperty('plugin'))
+                                return settings.callback(new Error('Model file ' + file + ' is invalid: Wrong plugin definition.'));
+                            schema.plugin(record.plugin, record.options);
+                        }
+
 
                         // If autoIncrementIds:true then utilize mongoose-auto-increment plugin for this model.
                         if (settings.autoIncrementNumberIds)
