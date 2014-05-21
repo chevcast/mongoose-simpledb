@@ -18,7 +18,9 @@ module.exports = exports = {
                 // The path to the directory where your dbmodels are stored.
                 modelsDir: path.join(__dirname, '..', '..', 'dbmodels'),
                 // Whether or not simpledb should auto-increment _id's of type Number.
-                autoIncrementNumberIds: true
+                autoIncrementNumberIds: true,
+                //default options of connect, can be extended, or changed
+                options: { server: { socketOptions: { keepAlive: 1 } } }
             };
 
         switch (arguments.length) {
@@ -34,7 +36,7 @@ module.exports = exports = {
                         break;
                     // If the only argument is an object, extend settings with the object.
                     case 'object':
-                        extend(settings, options);
+                        extend(settings, arguments[0]);
                 }
                 break;
             case 2:
@@ -55,7 +57,7 @@ module.exports = exports = {
         var db = { modelsLoaded: false };
 
         // Create mongoose connection and attach it to db object.
-        db.connection = mongoose.createConnection(settings.connectionString, { server: { socketOptions: { keepAlive: 1 } } });
+        db.connection = mongoose.createConnection(settings.connectionString, settings.options);
 
         // If a mongoose error occurs then invoke the callback with the error.
         db.connection.on('error', settings.callback);
@@ -75,7 +77,7 @@ module.exports = exports = {
             fs.readdir(settings.modelsDir, function (err, files) {
                 if (err) return settings.callback(err);
                 files.forEach(function (file) {
-                    if (path.extname(file) === '.js') {
+                    if (path.extname(file) === '.js' || path.extname(file) === '.coffee') {
                         var modelName = path.basename(file.replace(path.extname(file), '')),
                             modelData = require(path.join(settings.modelsDir, file));
 
@@ -101,6 +103,14 @@ module.exports = exports = {
                                     schema.virtual(key).set(virtualData.set);
                             }
                         }
+                        
+                        //Add plugins to schema
+                        for (var record in modelData.plugins) {
+                            if (!record.hasOwnProperty('plugin'))
+                                return settings.callback(new Error('Model file ' + file + ' is invalid: Wrong plugin definition.'));
+                            schema.plugin(record.plugin, record.options);
+                        }
+
 
                         // If autoIncrementIds:true then utilize mongoose-auto-increment plugin for this model.
                         if (settings.autoIncrementNumberIds)
