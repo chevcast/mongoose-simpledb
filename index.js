@@ -2,8 +2,7 @@ var mongoose = require('mongoose'),
     fs = require('fs'),
     path = require('path'),
     autoIncrement = require('mongoose-auto-increment'),
-    extend = require('extend'),
-    async = require('async');
+    extend = require('extend');
 
 module.exports = exports = {
     
@@ -76,7 +75,8 @@ module.exports = exports = {
             // Find and load all Mongoose dbmodels from the dbmodels directory.
             fs.readdir(settings.modelsDir, function (err, files) {
                 if (err) return settings.callback(err);
-                files.forEach(function (file) {
+                for (var i in files) {
+                   var file = files[i];
                     if (path.extname(file) === '.js' || path.extname(file) === '.coffee') {
                         var modelName = path.basename(file.replace(path.extname(file), '')),
                             modelData = require(path.join(settings.modelsDir, file));
@@ -108,7 +108,7 @@ module.exports = exports = {
                         for (var key in modelData.plugins) {
                             var record = modelData.plugins[key];
                             if (!record.hasOwnProperty('plugin'))
-                                throw new Error('Model file ' + file + ' is invalid: Wrong plugin definition.');
+                                return settings.callback(new Error('Model file ' + file + ' is invalid: Wrong plugin definition.'));
                             schema.plugin(record.plugin, record.options);
                         }
 
@@ -129,7 +129,7 @@ module.exports = exports = {
                         // Store model in db API.
                         db[propName] = db.connection.model(modelName, schema);
                     }
-                });
+                }
 
                 // Set modelsLoaded to true.
                 db.modelsLoaded = true;

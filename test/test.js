@@ -28,7 +28,7 @@ describe("simpledb", function () {
             });
         });
 
-        it ("should return a db object that is lazy-loaded with our models.", function (done) {
+        it("should return a db object that is lazy-loaded with our models.", function (done) {
             var db = simpledb.init(options, function (err) {
                 should.not.exist(err);
                 db.should.have.property('modelsLoaded', true);
@@ -57,6 +57,48 @@ describe("simpledb", function () {
                 done();
             });
         });
+
+        it("should not use autoincrement plugin.", function (done) {
+            var localOptions = { modelsDir: path.join(__dirname, 'dbmodels'), autoIncrementNumberIds: false };
+            simpledb.init(localOptions, function (err, db) {
+                should.not.exist(err);
+                should.exist(db);
+                should.not.exist(db.Book.nextCount);
+                done();
+            });
+        });
+
+
+        it("should correct load plugins.", function (done) {
+            var localOptions = { modelsDir: path.join(__dirname, 'pluginsmodels'), autoIncrementNumberIds: false};
+            simpledb.init(localOptions, function (err, db) {
+                should.not.exist(err);
+                should.exist(db);
+                should.exist(db.Plugged.nextCount);
+                done();
+            });
+        });
+
+
+        it("should throw error with model error.", function (done) {
+            var localOptions = {modelsDir: path.join(__dirname, 'errormodels')};
+            simpledb.init(localOptions, function (err, db) {
+                should.exist(err);
+                should.not.exist(db);
+                done();
+            });
+        });
+
+
+        it("should throw error with plugin error.", function (done) {
+            var localOptions = {modelsDir: path.join(__dirname, 'errormodels2')};
+            simpledb.init(localOptions, function (err, db) {
+                should.exist(err);
+                should.not.exist(db);
+                done();
+            });
+        });
+
 
     });
 
