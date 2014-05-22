@@ -105,9 +105,10 @@ module.exports = exports = {
                         }
                         
                         //Add plugins to schema
-                        for (var record in modelData.plugins) {
+                        for (var key in modelData.plugins) {
+                            var record = modelData.plugins[key];
                             if (!record.hasOwnProperty('plugin'))
-                                return settings.callback(new Error('Model file ' + file + ' is invalid: Wrong plugin definition.'));
+                                throw new Error('Model file ' + file + ' is invalid: Wrong plugin definition.');
                             schema.plugin(record.plugin, record.options);
                         }
 
