@@ -1,0 +1,3 @@
+schema = {
+    _id: Number
+};
