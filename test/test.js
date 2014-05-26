@@ -173,6 +173,40 @@ describe("simpledb", function () {
             }
         });
 
+        it("should correct set settings of mongoose-auto-increment plugin", function (done) {
+            var localOptions = options = {modelsDir: path.join(__dirname, 'dbmodels'), autoIncrementSettings: {startAt: 1}};
+
+            simpledb.init(localOptions, function (err, db) {
+                if (err) return done(err);
+
+                // Arrange
+                var book = new db.Book({
+                    title: "The Hobbit",
+                    author: new db.Author({ name: { first: "J. R. R.", last: "Tolkien" } }),
+                    publishDate: new Date("9/21/1937")
+                });
+
+                // Act
+                async.series({
+                    book: function (cb) {
+                        book.save(cb);
+                    },
+                    nextCount: function (cb) {
+                        book.nextCount(cb);
+                    }
+                }, assert);
+
+                // Assert
+                function assert(err, results) {
+                    should.not.exist(err);
+                    results.book[0].should.have.property('_id', 1);
+                    results.nextCount.should.equal(2);
+                    done();
+                }
+            });
+
+        });
+
     });
 
 });
