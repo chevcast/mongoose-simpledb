@@ -6,9 +6,7 @@ var mongoose = require('mongoose'),
 
 module.exports = exports = {
 
-    db: {
-        modelsLoaded: false
-    },
+    db: { modelsLoaded: false },
     
     init: function () {
         var _this = this,
@@ -59,6 +57,15 @@ module.exports = exports = {
         // Create db object.
         var db = _this.db;
 
+        function resetDb () {
+            _this.db.modelsLoaded = false;
+            for (var key in _this.db) {
+                if (key !== 'modelsLoaded')
+                    delete _this.db[key];
+            }
+        }
+        resetDb();
+
         // Create mongoose connection and attach it to db object.
         db.connection = mongoose.createConnection(settings.connectionString, settings.options);
 
@@ -66,13 +73,7 @@ module.exports = exports = {
         db.connection.on('error', settings.callback);
 
         // When the connection closes reset the db object.
-        db.connection.on('close', function () {
-            _this.db.modelsLoaded = false;
-            for (var key in _this.db) {
-                if (key !== 'modelsLoaded')
-                    delete _this.db[key];
-            }
-        });
+        db.connection.on('close', resetDb);
 
         // Once the connection is open begin to load models from the database.
         db.connection.once('open', function () {
