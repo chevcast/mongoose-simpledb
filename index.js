@@ -5,6 +5,10 @@ var mongoose = require('mongoose'),
     extend = require('extend');
 
 module.exports = exports = {
+
+    db: {
+        modelsLoaded: false
+    },
     
     init: function () {
         var _this = this,
@@ -53,13 +57,22 @@ module.exports = exports = {
         }
 
         // Create db object.
-        var db = { modelsLoaded: false };
+        var db = _this.db;
 
         // Create mongoose connection and attach it to db object.
         db.connection = mongoose.createConnection(settings.connectionString, settings.options);
 
         // If a mongoose error occurs then invoke the callback with the error.
         db.connection.on('error', settings.callback);
+
+        // When the connection closes reset the db object.
+        db.connection.on('close', function () {
+            _this.db.modelsLoaded = false;
+            for (var key in _this.db) {
+                if (key !== 'modelsLoaded')
+                    delete _this.db[key];
+            }
+        });
 
         // Once the connection is open begin to load models from the database.
         db.connection.once('open', function () {
@@ -133,11 +146,6 @@ module.exports = exports = {
                 if (settings.callback) settings.callback(null, db);
             });
         });
-
-        // Declare a function that returns the db object for later retrieval.
-        _this.db = function () {
-            return db;
-        };
 
         // Return db object immediately in case the app would like a lazy-loaded reference.
         return db;
