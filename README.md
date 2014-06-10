@@ -194,7 +194,7 @@ simpledb.init(connectionString);
 
 // After a time...
 
-var db = require('mongoose-simpledb').db;
+var db = require('mongoose-simpledb').db();
 ```
 
 Remember that you can always check `db.modelsLoaded` to ensure that the object is ready to use.

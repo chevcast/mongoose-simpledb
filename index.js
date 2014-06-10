@@ -61,11 +61,6 @@ module.exports = exports = {
         // If a mongoose error occurs then invoke the callback with the error.
         db.connection.on('error', settings.callback);
 
-        // Whenever a connection closes remove the db object from the collection.
-        db.connection.on('close', function () {
-            if (_this.hasOwnProperty('db')) delete _this.db;
-        });
-
         // Once the connection is open begin to load models from the database.
         db.connection.once('open', function () {
             // If mongoose-auto-increment plugin is installedInitialize mongoose-auto-increment plugin.
@@ -139,8 +134,10 @@ module.exports = exports = {
             });
         });
 
-        // Store the db object for later retrieval.
-        _this.db = db;
+        // Declare a function that returns the db object for later retrieval.
+        _this.db = function () {
+            return db;
+        };
 
         // Return db object immediately in case the app would like a lazy-loaded reference.
         return db;
