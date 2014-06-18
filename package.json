@@ -6,7 +6,7 @@
   "dependencies": {
     "extend": "^1.2.1",
     "mongoose": "^3.8.12",
-    "mongoose-auto-increment": "^3.0.2"
+    "mongoose-auto-increment": "^3.0.3"
   },
   "devDependencies": {
     "mocha": "*",
