@@ -94,7 +94,11 @@ module.exports = exports = {
                             return settings.callback(new Error('Model file ' + file + ' is invalid: No schema.'));
 
                         // Create schema based on template in model file.
-                        var schema = new mongoose.Schema(modelData.schema, modelData.schemaOptions);
+                        var schema;
+                        if (modelData.schemaOptions)
+                            schema  = new mongoose.Schema(modelData.schema, modelData.schemaOptions);
+                        else
+                            schema = new mongoose.Schema(modelData.schema);
 
                         // Add any instance methods defined in model file.
                         extend(schema.methods, modelData.methods);
