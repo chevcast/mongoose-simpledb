@@ -167,7 +167,7 @@ describe("simpledb", function () {
             // Assert
             function assert(err, results) {
                 should.not.exist(err);
-                results.book.should.have.property('_id', 0);
+                results.book[0].should.have.property('_id', 0);
                 results.nextCount.should.equal(1);
                 done();
             }
