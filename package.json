@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "extend": "^2.0.0",
-    "mongoose-auto-increment": "^3.0.8"
+    "mongoose-auto-increment": "^3.2.0"
   },
   "peerDependencies": {
     "mongoose": "~3.8.18"
