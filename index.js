@@ -21,6 +21,7 @@ module.exports = exports = {
                 // Whether or not simpledb should auto-increment _id's of type Number.
                 autoIncrementNumberIds: true,
                 autoIncrementSettings: {
+                    field: "_id", // Field name of id, _id by default
                     startAt: 0, // The number the count should start at.
                     incrementBy: 1 // The number by which to increment the count each time.
                 },
@@ -131,11 +132,13 @@ module.exports = exports = {
 
 
                         // If autoIncrementIds:true then utilize mongoose-auto-increment plugin for this model.
-                        if (settings.autoIncrementNumberIds)
-                            if (schema.paths.hasOwnProperty('_id') && schema.paths._id.instance === 'Number') {
+                        if (settings.autoIncrementNumberIds) {
+                            var field = settings.autoIncrementSettings.field;
+                            if (schema.paths.hasOwnProperty(field) && schema.paths[field].instance === 'Number') {
                                 settings.autoIncrementSettings.model = modelName;
                                 schema.plugin(autoIncrement.plugin, settings.autoIncrementSettings);
                             }
+                        }
 
                         // If model name contains an underscore then camelCase it.
                         var propName = modelName.charAt(0).toUpperCase() + modelName.slice(1);
