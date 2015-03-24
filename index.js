@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 module.exports = exports = {
 
     db: { modelsLoaded: false },
-    
+
     init: function () {
         var _this = this,
             settings = {
@@ -121,7 +121,7 @@ module.exports = exports = {
                                     schema.virtual(key).set(virtualData.set);
                             }
                         }
-                        
+
                         //Add plugins to schema
                         for (var key in modelData.plugins) {
                             var record = modelData.plugins[key];
@@ -164,7 +164,7 @@ module.exports = exports = {
         // Return db object immediately in case the app would like a lazy-loaded reference.
         return db;
     },
-    
+
     // Expose mongoose types for easy access.
     Types: mongoose.Schema.Types,
 

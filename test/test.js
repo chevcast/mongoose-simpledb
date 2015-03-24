@@ -48,7 +48,7 @@ describe("simpledb", function () {
         // We aren't specifying a models directory and the default models directory doesn't exist so this
         // should fail with a "readdir" error.
         should.exist(err);
-        err.message.substr(0, 15).should.equal('ENOENT, readdir');
+        ['ENOENT, readdir', 'ENOENT, scandir'].should.include(err.message.substr(0, 15));
         done();
       });
     });
@@ -58,7 +58,7 @@ describe("simpledb", function () {
         // We aren't specifying a models directory and the default models directory doesn't exist so this
         // should fail with a "readdir" error.
         should.exist(err);
-        err.message.substr(0, 15).should.equal('ENOENT, readdir');
+        ['ENOENT, readdir', 'ENOENT, scandir'].should.include(err.message.substr(0, 15));
         done();
       });
     });
@@ -196,7 +196,7 @@ describe("simpledb", function () {
 
     it("should correct set settings of mongoose-auto-increment plugin", function (done) {
 
-      var localOptions = extend({}, options, { autoIncrementSettings: { startAt: 5 } });
+      var localOptions = extend({}, options, { modelsDir: path.join(__dirname, 'pluginsmodels'), autoIncrementSettings: { startAt: 5, field: 'id' } });
 
       _db.connection.db.dropDatabase(function (err) {
 
@@ -207,26 +207,25 @@ describe("simpledb", function () {
           if (err) return done(err);
 
           // Arrange
-          var book = new db.Book({
-            title: "The Hobbit",
-            author: new db.Author({ name: { first: "J. R. R.", last: "Tolkien" } }),
-            publishDate: new Date("9/21/1937")
+          var ulrs = new db.Plugged({
+            url: "https://github.com"
           });
 
           // Act
           async.series({
-            book: function (cb) {
-              book.save(cb);
+            ulrs: function (cb) {
+              ulrs.save(cb);
             },
             nextCount: function (cb) {
-              book.nextCount(cb);
+              ulrs.nextCount(cb);
             }
           }, assert);
 
           // Assert
           function assert(err, results) {
+            console.log(err, results);
             should.not.exist(err);
-            results.book[0].should.have.property('_id', 5);
+            results.ulrs[0].should.have.property('id', 5);
             results.nextCount.should.equal(6);
             done();
           }
