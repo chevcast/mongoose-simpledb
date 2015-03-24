@@ -206,7 +206,6 @@ describe("simpledb", function () {
 
           if (err) return done(err);
 
-          // Arrange
           var ulrs = new db.Plugged({
             url: "https://github.com"
           });
@@ -223,7 +222,6 @@ describe("simpledb", function () {
 
           // Assert
           function assert(err, results) {
-            console.log(err, results);
             should.not.exist(err);
             results.ulrs[0].should.have.property('id', 5);
             results.nextCount.should.equal(6);
