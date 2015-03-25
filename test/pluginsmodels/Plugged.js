@@ -1,11 +1,11 @@
 exports.schema = {
-    _id: Number,
+    id: Number,
     url: String
 };
 
 exports.plugins = [
     {
         plugin: require('mongoose-auto-increment').plugin,
-        options: 'Plugged'
+        options: {model:'Plugged', startAt:5, field: 'id'}
     }
 ];

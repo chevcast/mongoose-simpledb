@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 module.exports = exports = {
 
     db: { modelsLoaded: false },
-    
+
     init: function () {
         var _this = this,
             settings = {
@@ -21,6 +21,7 @@ module.exports = exports = {
                 // Whether or not simpledb should auto-increment _id's of type Number.
                 autoIncrementNumberIds: true,
                 autoIncrementSettings: {
+                    field: "_id", // Field name of id, _id by default
                     startAt: 0, // The number the count should start at.
                     incrementBy: 1 // The number by which to increment the count each time.
                 },
@@ -120,7 +121,7 @@ module.exports = exports = {
                                     schema.virtual(key).set(virtualData.set);
                             }
                         }
-                        
+
                         //Add plugins to schema
                         for (var key in modelData.plugins) {
                             var record = modelData.plugins[key];
@@ -131,11 +132,13 @@ module.exports = exports = {
 
 
                         // If autoIncrementIds:true then utilize mongoose-auto-increment plugin for this model.
-                        if (settings.autoIncrementNumberIds)
-                            if (schema.paths.hasOwnProperty('_id') && schema.paths._id.instance === 'Number') {
+                        if (settings.autoIncrementNumberIds) {
+                            var field = settings.autoIncrementSettings.field;
+                            if (schema.paths.hasOwnProperty(field) && schema.paths[field].instance === 'Number') {
                                 settings.autoIncrementSettings.model = modelName;
                                 schema.plugin(autoIncrement.plugin, settings.autoIncrementSettings);
                             }
+                        }
 
                         // If model name contains an underscore then camelCase it.
                         var propName = modelName.charAt(0).toUpperCase() + modelName.slice(1);
@@ -161,7 +164,7 @@ module.exports = exports = {
         // Return db object immediately in case the app would like a lazy-loaded reference.
         return db;
     },
-    
+
     // Expose mongoose types for easy access.
     Types: mongoose.Schema.Types,
 
