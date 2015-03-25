@@ -5,10 +5,10 @@
   "main": "index.js",
   "dependencies": {
     "extend": "^2.0.0",
-    "mongoose-auto-increment": "^3.2.0"
+    "mongoose-auto-increment": "^3.2.3"
   },
   "peerDependencies": {
-    "mongoose": "~3.8.18"
+    "mongoose": "^4.0.0"
   },
   "devDependencies": {
     "mocha": "*",
