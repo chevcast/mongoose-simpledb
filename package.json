@@ -1,14 +1,14 @@
 {
   "name": "mongoose-simpledb",
-  "version": "5.0.0",
+  "version": "4.0.3",
   "description": "Simple API for defining mongoose dbmodels and loading them into a single object for easy access.",
   "main": "index.js",
   "dependencies": {
-    "extend": "^3.0.0",
-    "mongoose-auto-increment": "^5.0.1"
+    "extend": "^2.0.0",
+    "mongoose-auto-increment": "^3.2.3"
   },
   "peerDependencies": {
-    "mongoose": "~3.8.18"
+    "mongoose": "^4.0.0"
   },
   "devDependencies": {
     "mocha": "*",
