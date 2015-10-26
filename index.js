@@ -130,6 +130,17 @@ module.exports = exports = {
                             schema.plugin(record.plugin, record.options);
                         }
 
+                        //Add pre hooks
+                        for (var key in modelData.pre) {
+                            var record = modelData.pre[key];
+                            schema.pre(key, record);
+                        }
+
+                        //Add post hooks
+                        for (var key in modelData.post) {
+                            var record = modelData.post[key];
+                            schema.post(key, record);
+                        }
 
                         // If autoIncrementIds:true then utilize mongoose-auto-increment plugin for this model.
                         if (settings.autoIncrementNumberIds) {
