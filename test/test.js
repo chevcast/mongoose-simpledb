@@ -48,7 +48,7 @@ describe("simpledb", function () {
         // We aren't specifying a models directory and the default models directory doesn't exist so this
         // should fail with a "readdir" error.
         should.exist(err);
-        ['ENOENT, readdir', 'ENOENT, scandir'].should.include(err.message.substr(0, 15));
+        ['ENOENT, readdir', 'ENOENT, scandir', 'ENOENT: no such'].should.include(err.message.substr(0, 15));
         done();
       });
     });
@@ -58,7 +58,7 @@ describe("simpledb", function () {
         // We aren't specifying a models directory and the default models directory doesn't exist so this
         // should fail with a "readdir" error.
         should.exist(err);
-        ['ENOENT, readdir', 'ENOENT, scandir'].should.include(err.message.substr(0, 15));
+        ['ENOENT, readdir', 'ENOENT, scandir', 'ENOENT: no such'].should.include(err.message.substr(0, 15));
         done();
       });
     });
@@ -191,6 +191,30 @@ describe("simpledb", function () {
         });
 
       });
+
+    });
+
+    it("should correct work with pre and post hooks", function (done) {
+
+      simpledb.init(options, function (err, db) {
+
+        var author = new db.Author({
+          name: {
+            first: 'Alex',
+            last: 'Ford'
+          },
+          birthday: new Date('3/2/1987')
+        });
+        author.updateCounter.should.equal(0);
+        author.save();
+
+        db.Author.findOne(function (err, record) {
+          record.updateCounter.should.equal(1);
+          done();
+        });
+
+      });
+
 
     });
 

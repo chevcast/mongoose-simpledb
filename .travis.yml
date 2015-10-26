@@ -3,5 +3,7 @@ services:
   - mongodb
 node_js:
   - "0.10"
+  - "0.12"
+  - "4.2"
 notifications:
   email: false

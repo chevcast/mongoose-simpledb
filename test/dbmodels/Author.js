@@ -8,8 +8,24 @@ exports.schema = {
     },
     birthday: Date,
     gender: String,
-    bio: String
+    bio: String,
+    updateCounter: {type: Number, default: 0}
 };
+
+
+exports.pre = {
+    save: function (next) {
+        this.updateCounter++;
+        next();
+    }
+};
+
+exports.post = {
+    save: function (record) {
+        console.log("Post-hook is works!");
+    }
+};
+
 
 exports.methods = {
     formatBirthday: function (formatString) {
