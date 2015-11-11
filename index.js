@@ -142,6 +142,13 @@ module.exports = exports = {
                             schema.post(key, record);
                         }
 
+                        //Array of indexes
+                        if (modelData.hasOwnProperty('indexes'))
+                          for (var i=0; i<modelData.indexes.length; i++) {
+                              var index = modelData.indexes[i];
+                              schema.index(index.fields, index.options);
+                          }
+
                         // If autoIncrementIds:true then utilize mongoose-auto-increment plugin for this model.
                         if (settings.autoIncrementNumberIds) {
                             var field = settings.autoIncrementSettings.field;
