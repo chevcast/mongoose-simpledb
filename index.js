@@ -26,7 +26,7 @@ module.exports = exports = {
                     incrementBy: 1 // The number by which to increment the count each time.
                 },
                 //default options of connect, can be extended, or changed
-                options: { server: { socketOptions: { keepAlive: 1 } } }
+                options: { keepAlive: true }
             };
 
         switch (arguments.length) {
