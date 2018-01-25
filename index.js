@@ -1,7 +1,6 @@
 var mongoose = require('mongoose'),
     fs = require('fs'),
     path = require('path'),
-    autoIncrement = require('mongoose-auto-increment'),
     extend = require('extend');
 
 module.exports = exports = {
@@ -18,15 +17,8 @@ module.exports = exports = {
                 connectionString: 'mongodb://localhost/test',
                 // The path to the directory where your dbmodels are stored.
                 modelsDir: path.join(__dirname, '..', '..', 'dbmodels'),
-                // Whether or not simpledb should auto-increment _id's of type Number.
-                autoIncrementNumberIds: true,
-                autoIncrementSettings: {
-                    field: "_id", // Field name of id, _id by default
-                    startAt: 0, // The number the count should start at.
-                    incrementBy: 1 // The number by which to increment the count each time.
-                },
                 //default options of connect, can be extended, or changed
-                options: { keepAlive: true }
+                options: { keepAlive: 300000, connectTimeoutMS: 30000 }
             };
 
         switch (arguments.length) {
@@ -82,9 +74,6 @@ module.exports = exports = {
 
         // Once the connection is open begin to load models from the database.
         db.connection.once('open', function () {
-            // If mongoose-auto-increment plugin is installedInitialize mongoose-auto-increment plugin.
-            if (settings.autoIncrementNumberIds)
-                autoIncrement.initialize(db.connection);
 
             // Find and load all Mongoose dbmodels from the dbmodels directory.
             fs.readdir(settings.modelsDir, function (err, files) {
@@ -148,15 +137,6 @@ module.exports = exports = {
                               var index = modelData.indexes[i];
                               schema.index(index.fields, index.options);
                           }
-
-                        // If autoIncrementIds:true then utilize mongoose-auto-increment plugin for this model.
-                        if (settings.autoIncrementNumberIds) {
-                            var field = settings.autoIncrementSettings.field;
-                            if (schema.paths.hasOwnProperty(field) && schema.paths[field].instance === 'Number') {
-                                settings.autoIncrementSettings.model = modelName;
-                                schema.plugin(autoIncrement.plugin, settings.autoIncrementSettings);
-                            }
-                        }
 
                         // If model name contains an underscore then camelCase it.
                         var propName = modelName.charAt(0).toUpperCase() + modelName.slice(1);
