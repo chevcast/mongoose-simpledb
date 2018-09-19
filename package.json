@@ -4,11 +4,10 @@
   "description": "Simple API for defining mongoose dbmodels and loading them into a single object for easy access.",
   "main": "index.js",
   "dependencies": {
-    "extend": "^3.0.0",
-    "mongoose-auto-increment": "^5.0.1"
+    "extend": "^3.0.0"
   },
   "peerDependencies": {
-    "mongoose": "^4.0.0"
+    "mongoose": "^5.0.0"
   },
   "devDependencies": {
     "mocha": "*",
